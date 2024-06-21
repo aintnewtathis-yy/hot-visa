@@ -1,0 +1,105 @@
+@font-face {
+	font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+	src:
+		url('../fonts/ARIAL.woff') format('woff');
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+	padding-inline: 20px;
+	margin-inline: auto;
+}
+
+* {
+	color: var(--text-color);
+	position: relative;
+	font-family: arial;
+}
+html {
+	scrollbar-gutter: stable;
+	height: auto;
+}
+
+body {
+	font-family: arial;
+	font-weight: 400;
+	line-height: 120%;
+	color: var(--text-color);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white-color);
+	position: relative;
+
+	&.locked{
+		overflow: hidden;
+	}
+
+	@include fluid-text(17, 16);
+
+}
+.btn-main {
+	padding: 17px;
+	background-color: var(--text-color);
+	width: 100%;
+    max-width: 300px;
+	color: #fff;
+
+	@include hover {
+	}
+
+	@include mobile {
+		max-width: 100%;
+	}
+}
+.btn-main-invert {
+	padding: 17px;
+	background-color: #fff;
+	width: 100%;
+    max-width: 300px;
+	color: #000;
+
+	@include hover {
+	}
+
+	@include mobile {
+		max-width: 100%;
+	}
+}
+.btn-svg{
+	display: flex;
+	gap: 10px;
+	color: var(--white-color);
+	align-items: center;
+	justify-content: center;
+
+	span{
+		color: #fff;
+	}
+	svg{
+		width: 20px;
+		height: 20px;
+	}
+}
+.--text-xl-l{
+	@include fluid-text(84,50);
+
+	@include tablet {
+		@include fluid-text(50, 30);
+	}
+}
+.--text-xl{
+	@include fluid-text(84,50);
+
+	letter-spacing: -3px;
+	line-height: 110%;
+}
+.--text-l{
+	@include fluid-text(55,28);
+
+	letter-spacing: -1.5px;
+	line-height: 110%;
+}
