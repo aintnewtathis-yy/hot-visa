@@ -26,8 +26,5 @@
 		"svelte-preprocess": "^5.1.4",
 		"vite": "^5.0.3"
 	},
-	"type": "module",
-	"dependencies": {
-		"@svelte-put/dragscroll": "^3.0.1"
-	}
+	"type": "module"
 }
