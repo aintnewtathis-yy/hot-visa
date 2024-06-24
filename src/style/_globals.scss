@@ -2,8 +2,7 @@
 	font-family: arial;
 	font-style: normal;
 	font-weight: normal;
-	src:
-		url('../fonts/ARIAL.woff') format('woff');
+	src: url('../fonts/ARIAL.woff') format('woff');
 }
 
 .container {
@@ -21,6 +20,12 @@
 html {
 	scrollbar-gutter: stable;
 	height: auto;
+
+	&:has(body.locked) {
+		@include above-tablet {
+			padding-right: 1px;
+		}
+	}
 }
 
 body {
@@ -34,18 +39,17 @@ body {
 	background-color: var(--white-color);
 	position: relative;
 
-	&.locked{
+	&.locked {
 		overflow: hidden;
 	}
 
 	@include fluid-text(17, 16);
-
 }
 .btn-main {
 	padding: 17px;
 	background-color: var(--text-color);
 	width: 100%;
-    max-width: 300px;
+	max-width: 300px;
 	color: #fff;
 
 	@include hover {
@@ -59,7 +63,7 @@ body {
 	padding: 17px;
 	background-color: #fff;
 	width: 100%;
-    max-width: 300px;
+	max-width: 300px;
 	color: #000;
 
 	@include hover {
@@ -69,37 +73,44 @@ body {
 		max-width: 100%;
 	}
 }
-.btn-svg{
+.btn-svg {
 	display: flex;
 	gap: 10px;
 	color: var(--white-color);
 	align-items: center;
 	justify-content: center;
 
-	span{
+	span {
 		color: #fff;
 	}
-	svg{
+	svg {
 		width: 20px;
 		height: 20px;
 	}
 }
-.--text-xl-l{
-	@include fluid-text(84,50);
+.--text-xl-l {
+	@include fluid-text(84, 50);
 
 	@include tablet {
 		@include fluid-text(50, 30);
 	}
 }
-.--text-xl{
-	@include fluid-text(84,50);
+.--text-xl {
+	@include fluid-text(84, 50);
 
 	letter-spacing: -3px;
 	line-height: 110%;
 }
-.--text-l{
-	@include fluid-text(55,28);
+.--text-l {
+	@include fluid-text(55, 28);
 
 	letter-spacing: -1.5px;
 	line-height: 110%;
+}
+
+body:has(.consult-modal.active) {
+	button#triggerConsult {
+		opacity: 0!important;
+		pointer-events: none;
+	}
 }

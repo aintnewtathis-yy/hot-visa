@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { modalOpen } from '$lib/stores';
 
 	let visasMenu;
 	let visasLink;
@@ -71,19 +72,32 @@
 			document.querySelector('body').classList.toggle('locked');
 		}
 	}
-	function consultPopupHandle() {
-		consultModal.classList.toggle('active');
-		document.querySelector('body').classList.toggle('locked');
-
-		if (window.innerWidth < 1024) {
-			burgerIcon.classList.toggle('active');
+	function consultPopupHandle(state) {
+		if (!consultModal) {
+			return;
 		}
+		if (state) {
+			consultModal.classList.add('active');
+			document.querySelector('body').classList.add('locked');
 
-		consultModal.querySelector('p[data-closeConsult]')?.addEventListener('click', () => {
+			if (window.innerWidth < 1024) {
+				burgerIcon.classList.add('active');
+			}
+		} else {
 			consultModal.classList.remove('active');
 			document.querySelector('body').classList.remove('locked');
-		});
+
+			if (window.innerWidth < 1024) {
+				burgerIcon.classList.remove('active');
+			}
+		}
 	}
+
+	function toggleConsult() {
+		$modalOpen = !$modalOpen;
+	}
+
+	$: consultPopupHandle($modalOpen);
 
 	onMount(() => {
 		if (window.innerWidth > 1024) {
@@ -104,12 +118,12 @@
 		<div class="header">
 			<div class="header-top hidden-tablet">
 				<a href="#">все направления</a>
-				<a href="#">отзывы клиентов</a>
-				<a href="#">
+				<a href="#reviews">отзывы клиентов</a>
+				<a href="/">
 					<img src="/logo.svg" alt="logo" />
 				</a>
 				<p>Москва, ул. Лесная д.43, офис 221</p>
-				<a href="#">контакты</a>
+				<a href="/contacts">контакты</a>
 			</div>
 			<div class="header-bottom hidden-tablet">
 				<ul class="header-bottom-main-menu">
@@ -123,10 +137,10 @@
 						<a href="#">Услуги</a>
 					</li>
 					<li>
-						<a href="#">О нас</a>
+						<a href="/about">О нас</a>
 					</li>
 					<li class="--filled">
-						<a href="#" on:click={consultPopupHandle}>Консультация</a>
+						<a href="#" on:click={toggleConsult}>Консультация</a>
 					</li>
 					<li>
 						<a href="tel:+79251171777">+7 925 117-1777</a>
@@ -157,52 +171,52 @@
 			<ul class="level-two" data-continent="europe">
 				<li data-backtolevelone><p>Назад</p></li>
 				<li>
-					<a href="#">Болгария</a>
+					<a href="/visas/bolgaria">Болгария</a>
 				</li>
 				<li>
-					<a href="#">Великобритания</a>
+					<a href="/visas/uk">Великобритания</a>
 				</li>
 				<li>
-					<a href="#">Германия</a>
+					<a href="/visas/germany">Германия</a>
 				</li>
 				<li>
-					<a href="#">Греция</a>
+					<a href="/visas/greece">Греция</a>
 				</li>
 				<li>
-					<a href="#">Испания</a>
+					<a href="/visas/spain">Испания</a>
 				</li>
 				<li>
-					<a href="#">Италия</a>
+					<a href="/visas/italy">Италия</a>
 				</li>
 				<li>
-					<a href="#">Канада</a>
+					<a href="/visas/canada">Канада</a>
 				</li>
 				<li>
-					<a href="#">Кипр</a>
+					<a href="/visas/cipr">Кипр</a>
 				</li>
 				<li>
 					<a href="#">Франция</a>
 				</li>
 			</ul>
+			<ul class="level-two" data-continent="na">
+				<li data-backtolevelone><p>Назад</p></li>
+				<li>
+					<a href="/visas/usa">США</a>
+				</li>
+			</ul>
 			<ul class="level-two" data-continent="asia">
 				<li data-backtolevelone><p>Назад</p></li>
 				<li>
-					<a href="#">Индонезия</a>
+					<a href="/visas/indonesia">Индонезия</a>
 				</li>
 				<li>
-					<a href="#">Индия</a>
+					<a href="/visas/india">Индия</a>
 				</li>
 				<li>
 					<a href="#">Китай</a>
 				</li>
 				<li>
 					<a href="#">Сингапур</a>
-				</li>
-			</ul>
-			<ul class="level-two" data-continent="na">
-				<li data-backtolevelone><p>Назад</p></li>
-				<li>
-					<a href="#">США</a>
 				</li>
 			</ul>
 		</div>
@@ -226,13 +240,13 @@
 		<div class="container">
 			<ul class="level-one">
 				<li>
-					<a href="#">Страхование туристов</a>
+					<a href="/services/insurance">Страхование туристов</a>
 				</li>
 				<li>
-					<a href="#">Курьерская доставка</a>
+					<a href="/services/delivery">Курьерская доставка</a>
 				</li>
 				<li>
-					<a href="#">Получение загранпаспорта</a>
+					<a href="/services/pasport">Получение загранпаспорта</a>
 				</li>
 			</ul>
 		</div>
@@ -252,7 +266,7 @@
 				<a href="#">Услуги</a>
 			</li>
 			<li>
-				<a href="#">О нас</a>
+				<a href="/about">О нас</a>
 			</li>
 		</ul>
 		<ul class="level-two" data-link-mobile="visas">
@@ -260,37 +274,37 @@
 				<p>Назад</p>
 			</li>
 			<li>
-				<a href="#">Болгария</a>
+				<a href="/visas/bolgaria">Болгария</a>
 			</li>
 			<li>
-				<a href="#">Великобритания</a>
+				<a href="/visas/uk">Великобритания</a>
 			</li>
 			<li>
-				<a href="#">Германия</a>
+				<a href="/visas/germany">Германия</a>
 			</li>
 			<li>
-				<a href="#">Греция</a>
+				<a href="/visas/greece">Греция</a>
 			</li>
 			<li>
-				<a href="#">Испания</a>
+				<a href="/visas/spain">Испания</a>
 			</li>
 			<li>
-				<a href="#">Италия</a>
+				<a href="/visas/italy">Италия</a>
 			</li>
 			<li>
-				<a href="#">Канада</a>
+				<a href="/visas/canada">Канада</a>
 			</li>
 			<li>
-				<a href="#">Кипр</a>
+				<a href="/visas/cipr">Кипр</a>
 			</li>
 			<li>
 				<a href="#">Франция</a>
 			</li>
 			<li>
-				<a href="#">Индонезия</a>
+				<a href="/visas/indonesia">Индонезия</a>
 			</li>
 			<li>
-				<a href="#">Индия</a>
+				<a href="/visas/india">Индия</a>
 			</li>
 			<li>
 				<a href="#">Китай</a>
@@ -299,7 +313,7 @@
 				<a href="#">Сингапур</a>
 			</li>
 			<li>
-				<a href="#">США</a>
+				<a href="/visas/usa">США</a>
 			</li>
 		</ul>
 		<ul class="level-two" data-link-mobile="vnzh">
@@ -321,13 +335,13 @@
 				<p>Назад</p>
 			</li>
 			<li>
-				<a href="#">Страхование туристов</a>
+				<a href="/services/insurance">Страхование туристов</a>
 			</li>
 			<li>
-				<a href="#">Курьерская доставка</a>
+				<a href="/services/delivery">Курьерская доставка</a>
 			</li>
 			<li>
-				<a href="#">Получение загранпаспорта</a>
+				<a href="/services/pasport">Получение загранпаспорта</a>
 			</li>
 		</ul>
 	</div>
@@ -335,7 +349,7 @@
 		<div class="container">
 			<div class="consult-modal-body">
 				<p class="--text-xl">Заявка на визовую консультацию</p>
-				<p data-closeConsult class="close">закрыть</p>
+				<p on:click={toggleConsult} class="close">закрыть</p>
 
 				<form action="#" method="POST">
 					<div class="consult-modal-form-body">
@@ -359,9 +373,17 @@
 	</div>
 </header>
 
-<button class="btn-main" id="triggerConsult" on:click={consultPopupHandle}>Оформить визу</button>
+<button class="btn-main" id="triggerConsult" on:click={toggleConsult}>Оформить визу</button>
 
 <style lang="scss">
+	header {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background-color: #fff;
+	}
 	.header {
 		display: flex;
 		flex-direction: column;
@@ -618,6 +640,7 @@
 		top: 100%;
 		opacity: 0;
 		pointer-events: none;
+		overflow-y: scroll;
 
 		&:global(.active) {
 			opacity: 1;
@@ -654,7 +677,7 @@
 				cursor: pointer;
 
 				@include mobile {
-					display: none
+					display: none;
 				}
 			}
 
@@ -669,6 +692,8 @@
 
 				@include tablet {
 					gap: 60px;
+
+					padding-bottom: 100px;
 				}
 				div {
 					display: grid;

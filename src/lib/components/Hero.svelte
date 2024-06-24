@@ -1,4 +1,10 @@
 <script>
+	import { modalOpen } from '$lib/stores'
+
+	function toggleConsult() {
+		$modalOpen = !$modalOpen;
+		console.log($modalOpen);
+	}
 </script>
 
 <section>
@@ -7,10 +13,9 @@
 			<h1>
 				Первые <br />в быстром и удобном <br />оформлении виз
 			</h1>
-			<button class="btn-main-invert"> Бесплатная консультация </button>
+			<button class="btn-main-invert" on:click={toggleConsult}> Бесплатная консультация </button>
 		</div>
 	</div>
-	<button class="btn-main-invert"> Бесплатная консультация </button>
 </section>
 
 <style lang="scss">

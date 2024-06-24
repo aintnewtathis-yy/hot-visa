@@ -75,7 +75,7 @@
 	});
 </script>
 
-<section bind:this={section}>
+<section bind:this={section} id="reviews">
 	<div class="container">
 		<div class="whyus">
 			<img src="/china-flag.png" alt="china flag" class="bg-cover" />
