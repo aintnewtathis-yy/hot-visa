@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА В ГЕРМАНИЮ</h1>
 				<h2 class="--announce --text-xl">от 8 500 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/germany-hero.jpg" alt="statue of liberty" />
+					<img src="/germany-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Получение визы в Германию с высокой вероятностью одобрения — это то, что предлагает
@@ -203,7 +203,7 @@
 
 		&-mobile {
 			height: 100dvh;
-			background-image: url('/germany-hero.jpg');
+			background-image: url('/germany-hero.webp');
 			background-position: center center;
 			background-size: cover;
 			margin-inline: -20px;
@@ -262,12 +262,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}

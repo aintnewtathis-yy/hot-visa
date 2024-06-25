@@ -10,72 +10,72 @@
 					<p>Популярные</p>
 					<a href="#">
 						Испания
-						<img src="/spainflag.jpg" alt="spain flag" />
+						<img src="/spainflag.webp" alt="spain flag" />
 					</a>
 					<a href="#">
 						Греция
-						<img src="/greeceflag.jpg" alt="greece flag" />
+						<img src="/greeceflag.webp" alt="greece flag" />
 					</a>
 					<a href="#"
 						>Франция
-						<img src="/franceflag.jpg" alt="france flag" />
+						<img src="/franceflag.webp" alt="france flag" />
 					</a>
 					<a href="#"
 						>Норвегия
-						<img src="/norwayflag.jpg" alt="norway flag" />
+						<img src="/norwayflag.webp" alt="norway flag" />
 					</a>
 					<a href="#"
 						>Италия
-						<img src="/italyflag.jpg" alt="italy flag" />
+						<img src="/italyflag.webp" alt="italy flag" />
 					</a>
 					<a href="#"
 						>Индия
-						<img src="/indiaflag.jpg" alt="india flag" />
+						<img src="/indiaflag.webp" alt="india flag" />
 					</a>
 					<a href="#"
 						>США
-						<img src="/usaflag.jpg" alt="usa flag" />
+						<img src="/usaflag.webp" alt="usa flag" />
 					</a>
 				</div>
 				<div class="visas-grid-columns-list">
 					<p>Европа</p>
 					<a href="#">
 						Испания
-						<img src="/spainflag.jpg" alt="spain flag" />
+						<img src="/spainflag.webp" alt="spain flag" />
 					</a>
 					<a href="#">
 						Греция
-						<img src="/greeceflag.jpg" alt="greece flag" />
+						<img src="/greeceflag.webp" alt="greece flag" />
 					</a>
 					<a href="#"
 						>Франция
-						<img src="/franceflag.jpg" alt="france flag" />
+						<img src="/franceflag.webp" alt="france flag" />
 					</a>
 					<a href="#"
 						>Норвегия
-						<img src="/norwayflag.jpg" alt="norway flag" />
+						<img src="/norwayflag.webp" alt="norway flag" />
 					</a>
 					<a href="#"
 						>Италия
-						<img src="/italyflag.jpg" alt="italy flag" />
+						<img src="/italyflag.webp" alt="italy flag" />
 					</a>
 				</div>
 				<div class="visas-grid-columns-list">
 					<p>Азия</p>
 					<a href="#">
 						Китай
-						<img src="/chinaflag.jpg" alt="china flag" />
+						<img src="/chinaflag.webp" alt="china flag" />
 					</a>
 					<a href="#"
 						>Индия
-						<img src="/indiaflag.jpg" alt="india flag" />
+						<img src="/indiaflag.webp" alt="india flag" />
 					</a>
 				</div>
 				<div class="visas-grid-columns-list">
 					<p>Другие</p>
 					<a href="#"
 						>США
-						<img src="/usaflag.jpg" alt="usa flag" />
+						<img src="/usaflag.webp" alt="usa flag" />
 					</a>
 				</div>
 			</div>

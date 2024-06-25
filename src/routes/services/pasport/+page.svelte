@@ -13,7 +13,7 @@
 			<div class="service-hero">
 				<h1 class="--text-xl">Срочное оформление загранпаспорта</h1>
 				<div class="service-hero-info">
-					<img src="/pasport.jpg" alt="" />
+					<img src="/pasport.webp" alt="" />
 					<div>
 						<p>
 							Мы сотрудничаем как с компаниями, так и с частными лицами. Предоставляем комплексные

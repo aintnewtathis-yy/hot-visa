@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА В КАНАДУ</h1>
 				<h2 class="--announce --text-xl">от 15 000 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/canada-hero.jpg" alt="statue of liberty" />
+					<img src="/canada-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Получите визу в Канаду на срок до 10 лет! Канадское посольство осуществляет тщательную
@@ -248,7 +248,7 @@
 
 		&-mobile {
 			height: 100dvh;
-			background-image: url('/canada-hero.jpg');
+			background-image: url('/canada-hero.webp');
 			background-position: center center;
 			background-size: cover;
 			margin-inline: -20px;

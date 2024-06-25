@@ -1,11 +1,16 @@
 <script>
+	import { modalOpen } from '$lib/stores';
+
+	function toggleConsult() {
+		$modalOpen = !$modalOpen;
+	}
 </script>
 
 <footer>
 	<div class="container">
 		<div class="footer">
 			<div class="footer-top">
-				<button class="btn-main"> Связаться </button>
+				<button class="btn-main" on:click={toggleConsult}> Связаться </button>
 				<a href="#">
 					<img src="/logo.svg" alt="logo icon" />
 				</a>
@@ -15,19 +20,16 @@
 					<h6>HOTVISA</h6>
 					<ul class="footer-mid-column-list">
 						<li>
-							<a href="#">Главная</a>
+							<a href="/">Главная</a>
 						</li>
 						<li>
-							<a href="#">Отзывы</a>
+							<a href="/#reviews">Отзывы</a>
 						</li>
 						<li>
-							<a href="#">Вопросы</a>
+							<a href="/about">О нас</a>
 						</li>
 						<li>
-							<a href="#">О нас</a>
-						</li>
-						<li>
-							<a href="#">Новости</a>
+							<a href="/news">Новости</a>
 						</li>
 					</ul>
 				</div>
@@ -35,46 +37,46 @@
 					<h6>визы</h6>
 					<ul class="footer-mid-column-list">
 						<li>
-							<a href="#">Болгария</a>
+							<a href="/visas/bolgaria">Болгария</a>
 						</li>
 						<li>
-							<a href="#">Великобритания</a>
+							<a href="/visas/uk">Великобритания</a>
 						</li>
 						<li>
-							<a href="#">Германия</a>
+							<a href="/visas/germany">Германия</a>
 						</li>
 						<li>
-							<a href="#">Греция</a>
+							<a href="/visas/greece">Греция</a>
 						</li>
 						<li>
-							<a href="#">Испания</a>
+							<a href="/visas/spain">Испания</a>
 						</li>
 						<li>
-							<a href="#">Италия</a>
+							<a href="/visas/italy">Италия</a>
 						</li>
 						<li>
-							<a href="#">Канада</a>
+							<a href="/visas/canada">Канада</a>
 						</li>
 						<li>
-							<a href="#">Кипр</a>
+							<a href="/visas/cipr">Кипр</a>
 						</li>
 						<li>
-							<a href="#">Франция</a>
+							<a href="/visas/france">Франция</a>
 						</li>
 						<li>
-							<a href="#">Индонезия</a>
+							<a href="/visas/indonesia">Индонезия</a>
 						</li>
 						<li>
-							<a href="#">Индия</a>
+							<a href="/visas/india">Индия</a>
 						</li>
 						<li>
-							<a href="#">Китай</a>
+							<a href="/visas/china">Китай</a>
 						</li>
 						<li>
-							<a href="#">Сингапур</a>
+							<a href="/visas/singapur">Сингапур</a>
 						</li>
 						<li>
-							<a href="#">США</a>
+							<a href="/visas/usa">США</a>
 						</li>
 					</ul>
 				</div>
@@ -82,13 +84,13 @@
 					<h6>услуги</h6>
 					<ul class="footer-mid-column-list">
 						<li>
-							<a href="#">Получение загранпаспорта</a>
+							<a href="/services/pasport">Получение загранпаспорта</a>
 						</li>
 						<li>
-							<a href="#">Страхование туристов</a>
+							<a href="/services/insurance">Страхование туристов</a>
 						</li>
 						<li>
-							<a href="#">Курьерская доставка</a>
+							<a href="/services/delivery">Курьерская доставка</a>
 						</li>
 					</ul>
 				</div>
@@ -123,10 +125,10 @@
 			</div>
 			<div class="footer-bottom">
 				<div>
-					<img src="/payment1.png" alt="payment icon" />
-					<img src="/payment2.png" alt="payment icon" />
-					<img src="/payment3.png" alt="payment icon" />
-					<img src="/payment4.png" alt="payment icon" />
+					<img src="/payment1.webp" alt="payment icon" />
+					<img src="/payment2.webp" alt="payment icon" />
+					<img src="/payment3.webp" alt="payment icon" />
+					<img src="/payment4.webp" alt="payment icon" />
 				</div>
 				<p>©2003—2024 hotvisa, Все авторские права защищены.</p>
 			</div>

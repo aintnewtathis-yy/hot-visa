@@ -78,9 +78,9 @@
 <section bind:this={section} id="reviews">
 	<div class="container">
 		<div class="whyus">
-			<img src="/china-flag.png" alt="china flag" class="bg-cover" />
-			<img src="/china-flag.png" alt="china flag" class="bg-cover" />
-			<img src="/china-flag.png" alt="china flag" class="bg-cover hovered" />
+			<img src="/china-flag.webp" alt="china flag" class="bg-cover" />
+			<img src="/china-flag.webp" alt="china flag" class="bg-cover" />
+			<img src="/china-flag.webp" alt="china flag" class="bg-cover hovered" />
 			<p class="whyus-microtitle">Отзывы клиентов</p>
 			<div class="whyus-slider__wrap" bind:this={sliderWrap}>
 				<div class="whyus-slider" bind:this={slider}>
@@ -91,7 +91,7 @@
 							у меня возникали.
 						</h3>
 						<div class="whyus-slider__element-avatar">
-							<img src="/avatar.png" alt="user avatar" />
+							<img src="/avatar.webp" alt="user avatar" />
 
 							<div>
 								<p>Евгений Манн</p>
@@ -106,7 +106,7 @@
 							у меня возникали.
 						</h3>
 						<div class="whyus-slider__element-avatar">
-							<img src="/avatar.png" alt="user avatar" />
+							<img src="/avatar.webp" alt="user avatar" />
 
 							<div>
 								<p>Евгений Манн</p>
@@ -121,7 +121,7 @@
 							у меня возникали.
 						</h3>
 						<div class="whyus-slider__element-avatar">
-							<img src="/avatar.png" alt="user avatar" />
+							<img src="/avatar.webp" alt="user avatar" />
 
 							<div>
 								<p>Евгений Манн</p>

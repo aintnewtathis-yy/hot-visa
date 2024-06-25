@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА В ГРЕЦИЮ</h1>
 				<h2 class="--announce --text-xl">от 8 500 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/greece-hero.jpg" alt="statue of liberty" />
+					<img src="/greece-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Виза в Грецию — это шанс быстро организовать ваше путешествие благодаря HOT Visa. Мы
@@ -201,7 +201,7 @@
 
 		&-mobile {
 			height: 100dvh;
-			background-image: url('/greece-hero.jpg');
+			background-image: url('/greece-hero.webp');
 			background-position: center center;
 			background-size: cover;
 			margin-inline: -20px;
@@ -260,12 +260,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}

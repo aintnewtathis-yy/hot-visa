@@ -13,7 +13,7 @@
 			<div class="service-hero">
 				<h1 class="--text-xl">Страхование туристов</h1>
 				<div class="service-hero-info">
-					<img src="/service.png" alt="" />
+					<img src="/service.webp" alt="" />
 					<div>
 						<p>
 							Отпуск — это долгожданное событие, к которому готовятся заранее, планируя каждый день

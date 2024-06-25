@@ -296,12 +296,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}

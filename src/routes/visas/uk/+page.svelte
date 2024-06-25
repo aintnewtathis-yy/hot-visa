@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА В ВЕЛИКОБРИТАНИЮ</h1>
 				<h2 class="--announce --text-xl">от 12 000 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/uk-hero.jpg" alt="statue of liberty" />
+					<img src="/uk-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Для посещения Великобритании требуется оформление визы, которую можно получить
@@ -180,7 +180,7 @@
 
 		&-mobile {
 			height: 100dvh;
-			background-image: url('/uk-hero.jpg');
+			background-image: url('/uk-hero.webp');
 			background-position: center center;
 			background-size: cover;
 			margin-inline: -20px;
@@ -239,12 +239,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}

@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="news-single">
 			<h1 class="--text-xl">МИД РФ Предупредил об опасностях на Олимпиаде в Париже</h1>
-			<img src="/news-example.png" alt="news thumbnail" />
+			<img src="/news-example.webp" alt="news thumbnail" />
 			<div class="news-single-text">
 				<p>
 					Внешний министерство России предостерегло граждан, направляющихсяна олимпиаду в Париже, о

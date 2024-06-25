@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА В США</h1>
 				<h2 class="--announce --text-xl">от 12 500 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/visa-hero.png" alt="statue of liberty" />
+					<img src="/visa-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Виза в США для россиян. Получение визы обязательно для граждан, желающих посетить
@@ -295,7 +295,7 @@
 
 		&-mobile {
 			height: 100dvh;
-			background-image: url('/visa-hero.png');
+			background-image: url('/visa-hero.webp');
 			background-position: center center;
 			background-size: cover;
 			margin-inline: -20px;
@@ -354,12 +354,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}

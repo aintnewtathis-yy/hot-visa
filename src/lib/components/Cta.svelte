@@ -75,7 +75,7 @@
 
 		&-section {
 			padding: 40px 0 200px 0;
-			background-image: url('/cta-bg.png');
+			background-image: url('/cta-bg.webp');
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;

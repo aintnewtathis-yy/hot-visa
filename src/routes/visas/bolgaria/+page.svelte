@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА В БОЛГАРИЮ</h1>
 				<h2 class="--announce --text-xl">от 4 500 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/visa-hero.png" alt="statue of liberty" />
+					<img src="/visa-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Получение визы в Болгарию под ключ в агентстве Hot Visa. Мы обеспечим личную подачу с
@@ -267,12 +267,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}

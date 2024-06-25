@@ -13,7 +13,7 @@
 			<div class="service-hero">
 				<h1 class="--text-xl">Курьерская доставка</h1>
 				<div class="service-hero-info">
-					<img src="/delivery.jpg" alt="" />
+					<img src="/delivery.webp" alt="" />
 					<div>
 						<p>
 							Для того чтобы сэкономить время наших клиентов, мы осуществляем доставку документов, к

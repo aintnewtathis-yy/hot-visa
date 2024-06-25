@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { modalOpen } from '$lib/stores';
 
 	let pagination;
 	let paginationIndex = 0;
@@ -39,6 +40,10 @@
 		paginationElements[num]?.classList.add('active');
 	}
 
+	function toggleConsult() {
+		$modalOpen = !$modalOpen;
+	}
+
 	onMount(() => {
 		if (typeof window !== 'undefined') {
 			slider.addEventListener('scroll', () => {
@@ -67,17 +72,17 @@
 					<div class="whyus-slider__element">
 						<h3 class="--text-xl">Мы заботимся о вашей визе,<br />как о своей!</h3>
 						<p>Бесплатная консультация и забота о каждом клиенте</p>
-						<button class="btn-main"> Оформить визу </button>
+						<button class="btn-main" on:click={toggleConsult}> Оформить визу </button>
 					</div>
 					<div class="whyus-slider__element">
 						<h3 class="--text-xl">Мы заботимся о вашей визе,<br />как о своей!</h3>
 						<p>Бесплатная консультация и забота о каждом клиенте</p>
-						<button class="btn-main"> Оформить визу </button>
+						<button class="btn-main" on:click={toggleConsult}> Оформить визу </button>
 					</div>
 					<div class="whyus-slider__element">
 						<h3 class="--text-xl">Мы заботимся о вашей визе,<br />как о своей!</h3>
 						<p>Бесплатная консультация и забота о каждом клиенте</p>
-						<button class="btn-main"> Оформить визу </button>
+						<button class="btn-main" on:click={toggleConsult}> Оформить визу </button>
 					</div>
 				</div>
 				<button

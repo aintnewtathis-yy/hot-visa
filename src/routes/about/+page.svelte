@@ -8,7 +8,7 @@
 			<div class="about-hero">
 				<h1 class="--text-xl">О компании HOTVISA</h1>
 				<div>
-					<img src="/about.png" alt="meeting" />
+					<img src="/about.webp" alt="meeting" />
 					<div>
 						<p>
 							Вот уже c 2002 года  наша команда находится на рынке и качественно и быстро выполняет
@@ -185,9 +185,9 @@
 				padding: 33px 0;
 				border-bottom: 1px solid #ededed;
 
-                span{
-                    text-transform: uppercase;
-                }
+				span {
+					text-transform: uppercase;
+				}
 
 				&:first-child {
 					border-top: 1px solid #ededed;
@@ -197,6 +197,10 @@
 					background-color: #000;
 					border-color: transparent;
 					color: #fff;
+
+					span {
+						color: #fff;
+					}
 				}
 
 				@include fluid-text(30, 28);
@@ -206,14 +210,13 @@
 					text-align: start;
 					text-wrap: balance;
 					padding: 20px 0;
-                    text-align: center;
+					text-align: center;
 
 					@include fluid-text(16, 16);
 
-                    span{
-                        text-decoration: underline;
-                    }
-                    
+					span {
+						text-decoration: underline;
+					}
 
 					@include hover {
 						background-color: #fff;

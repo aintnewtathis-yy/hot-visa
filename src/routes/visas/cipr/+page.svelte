@@ -1,6 +1,6 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
-	import { modalOpen } from '$lib/stores'
+	import { modalOpen } from '$lib/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
@@ -17,7 +17,7 @@
 				<h1 class="--text-xl">ВИЗА НА КИПР</h1>
 				<h2 class="--announce --text-xl">от 15 000 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
-					<img src="/cipr-hero.jpg" alt="statue of liberty" />
+					<img src="/cipr-hero.webp" alt="statue of liberty" />
 					<div>
 						<p>
 							Виза на Кипр от 3 рабочих дней! Наша компания предлагает ускоренное оформление визовых
@@ -236,7 +236,7 @@
 
 		&-mobile {
 			height: 100dvh;
-			background-image: url('/cipr-hero.jpg');
+			background-image: url('/cipr-hero.webp');
 			background-position: center center;
 			background-size: cover;
 			margin-inline: -20px;
@@ -295,12 +295,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}
@@ -430,6 +426,23 @@
 
 				@include tablet {
 					width: 100%;
+				}
+			}
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					li {
+						@include fluid-text(16, 16);
+
+						list-style: disc inside;
+					}
 				}
 			}
 		}

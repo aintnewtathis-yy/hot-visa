@@ -1,6 +1,6 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
-	import { modalOpen } from '$lib/stores'
+	import { modalOpen } from '$lib/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
@@ -92,7 +92,7 @@
 				<button class="btn-main" on:click={toggleConsult}>Оформить визу</button>
 			</div>
 			<div class="visa-variants">
-				<h3 class="--text-xl-l">Виды виз в Индонезию</h3>
+				<h3 class="--text-xl-l">Виды виз в Испанию</h3>
 				<div class="visa-variants-element">
 					<p>• Категория A (транзитная виза)</p>
 					<div>
@@ -254,12 +254,8 @@
 					button {
 						margin-top: auto;
 
-						@include tablet {
-							position: fixed;
-							left: 20px;
-							bottom: 20px;
-							width: calc(100% - 40px);
-							z-index: 2;
+						@include mobile {
+							display: none;
 						}
 					}
 				}
