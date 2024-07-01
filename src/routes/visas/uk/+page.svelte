@@ -11,10 +11,10 @@
 	<div class="container">
 		<div class="visa">
 			<div class="visa-mobile visible-mobile">
-				<p>Виза <br />в Великобританию</p>
+				<p>Виза в Великобританию</p>
 			</div>
 			<div class="visa-hero">
-				<h1 class="--text-xl">ВИЗА В ВЕЛИКОБРИТАНИЮ</h1>
+				<h1 class="--text-xl-l">ВИЗА В ВЕЛИКОБРИТАНИЮ</h1>
 				<h2 class="--announce --text-xl">от 12 000 руб<span>*включая консульский сбор</span></h2>
 				<div class="visa-hero-info">
 					<img src="/uk-hero.webp" alt="statue of liberty" />
@@ -189,7 +189,7 @@
 			padding-top: 100px;
 
 			p {
-				font-size: 50px;
+				font-size: 35px;
 				text-transform: uppercase;
 				color: #fff;
 				line-height: 110%;

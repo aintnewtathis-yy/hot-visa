@@ -11,8 +11,8 @@
 
 <div style="display: flex; flex-direction:column; gap: 150px;">
 	<Hero />
-	<Whyus />
-	<PopularOption />
+	<Whyus /> 
+	<PopularOption /> 
 	<Reviews />
 	<Faq />
 	<Numbers />

@@ -519,4 +519,95 @@
 			}
 		}
 	}
+	.table {
+		display: flex;
+		gap: 3px;
+		flex-direction: column;
+
+		@include mobile{
+			p{
+				font-size: 10px;
+			}
+		}
+
+		&-first {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 3px;
+
+			text-align: center;
+			p {
+				display: block;
+				padding: 20px 0;
+				width: 100%;
+			}
+
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+				text-align: center;
+				justify-content: center;
+				background-color: #808080;
+				p {
+					color: #fff;
+				}
+
+				&:has(div) {
+					justify-content: end;
+					background-color: #fff;
+					p {
+						background-color: #808080;
+					}
+				}
+
+				div {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					background-color: #fff;
+					gap: 3px;
+					text-align: center;
+					p {
+						background-color: #ededed;
+
+						padding: 10px 0;
+						color: #000;
+						display: block;
+					}
+				}
+			}
+		}
+		&-second{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 3px;
+
+			text-align: center;
+			p {
+				display: block;
+				padding: 10px 0;
+				width: 100%;
+				background-color: #ededed;
+			}
+			div{
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+
+				&:not(:has(div)){
+					justify-content: center;
+
+					&:not(:has(p:nth-child(2))){
+						background-color: #ededed;
+					}
+				}
+
+				div{
+					display: flex;
+					flex-direction: row;
+					gap: 3px;
+				}
+			}
+		}
+	}
 </style>

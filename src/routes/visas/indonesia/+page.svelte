@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="visa">
 			<div class="visa-mobile visible-mobile">
-				<p>Виза <br />в Индонезию</p>
+				<p>Виза в Индонезию</p>
 			</div>
 			<div class="visa-hero">
 				<h1 class="--text-xl">ВИЗА В ИНДОНЕЗИЮ</h1>

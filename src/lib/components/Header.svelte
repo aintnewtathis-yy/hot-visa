@@ -120,7 +120,7 @@
 				<a href="#">все направления</a>
 				<a href="#reviews">отзывы клиентов</a>
 				<a href="/">
-					<enhanced:img src="/static/logo.svg" alt="logo" />
+					<img src="/logo.svg" alt="logo" />
 				</a>
 				<p>Москва, ул. Лесная д.43, офис 221</p>
 				<a href="/contacts">контакты</a>
@@ -149,10 +149,10 @@
 			</div>
 			<div class="header-mobile visible-tablet">
 				<a href="#">
-					<enhanced:img src="/static/logo.svg" alt="logo" />
+					<img src="/logo.svg" alt="logo" />
 				</a>
 				<a href="tel:+79999999999">
-					<enhanced:img src="/static/phone.svg" alt="phone icon" />
+					<img src="/phone.svg" alt="phone icon" />
 				</a>
 				<button class="burger-icon" on:click={burgerToggle} bind:this={burgerIcon}>
 					<span></span>

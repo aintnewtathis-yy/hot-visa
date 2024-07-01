@@ -12,7 +12,7 @@
 			<div class="footer-top">
 				<button class="btn-main" on:click={toggleConsult}> Связаться </button>
 				<a href="#">
-					<enhanced:img src="/static/logo.svg" alt="logo icon" />
+					<img src="/logo.svg" alt="logo icon" />
 				</a>
 			</div>
 			<div class="footer-mid">
@@ -109,26 +109,23 @@
 					</ul>
 					<div class="socials">
 						<a href="#">
-							<enhanced:img src="/static/social-placeholder.svg" alt="icon" />
+							<img src="/social-placeholder.svg" alt="icon" />
 						</a>
 						<a href="#">
-							<enhanced:img src="/static/social-placeholder.svg" alt="icon" />
+							<img src="/social-placeholder.svg" alt="icon" />
 						</a>
 						<a href="#">
-							<enhanced:img src="/static/social-placeholder.svg" alt="icon" />
+							<img src="/social-placeholder.svg" alt="icon" />
 						</a>
 						<a href="#">
-							<enhanced:img src="/static/social-placeholder.svg" alt="icon" />
+							<img src="/social-placeholder.svg" alt="icon" />
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="footer-bottom">
 				<div>
-					<enhanced:img src="/static/payment1.webp" alt="payment icon" />
-					<enhanced:img src="/static/payment2.webp" alt="payment icon" />
-					<enhanced:img src="/static/payment3.webp" alt="payment icon" />
-					<enhanced:img src="/static/payment4.webp" alt="payment icon" />
+					
 				</div>
 				<p>©2003—2024 hotvisa, Все авторские права защищены.</p>
 			</div>

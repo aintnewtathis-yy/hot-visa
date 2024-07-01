@@ -179,18 +179,18 @@
 </section>
 
 <style lang="scss">
-    section{
-        @include mobile {
-            background-color: #000;
-        }
-    }
+	section {
+		@include mobile {
+			background-color: #000;
+		}
+	}
 	.whyus {
 		display: flex;
 		flex-direction: column;
 		gap: 140px;
 		padding: 40px 0;
 
-		.bg-cover {
+		:global(picture:has(.bg-cover)) {
 			position: absolute;
 			top: 0;
 			left: -20px;
@@ -199,16 +199,17 @@
 			object-fit: cover;
 			opacity: 0;
 			filter: brightness(80%);
+			
 
 			transition: all 0.8s ease;
 
-			&.hovered {
-				opacity: 1;
+			@include mobile {
+				display: none;
 			}
+		}
 
-            @include mobile {
-                display: none;
-            }
+		:global(picture:has(.hovered)) {
+			opacity: 1;
 		}
 
 		&:has(.hovered) {
@@ -237,7 +238,7 @@
 			gap: 60px;
 			padding: 30px 0;
 
-            p,
+			p,
 			h3,
 			a {
 				transition: all 0.8s ease;
@@ -251,7 +252,6 @@
 			.pagination__element.active {
 				background-color: #fff;
 			}
-
 		}
 
 		&-microtitle {
@@ -348,7 +348,7 @@
 					}
 					@include mobile {
 						text-wrap: balance;
-                        width: 100%;
+						width: 100%;
 					}
 				}
 

@@ -2,7 +2,7 @@
 	font-family: arial;
 	font-style: normal;
 	font-weight: normal;
-	src: url('../fonts/ARIAL.woff') format('woff');
+	src: url('/fonts/ARIAL.woff') format('woff');
 }
 
 .container {
@@ -25,6 +25,12 @@ html {
 		@include above-tablet {
 			padding-right: 1px;
 		}
+	}
+}
+
+picture{
+	img{
+		height: 100%;
 	}
 }
 
@@ -92,7 +98,7 @@ body {
 	@include fluid-text(84, 50);
 
 	@include tablet {
-		@include fluid-text(50, 30);
+		@include fluid-text(50, 35);
 	}
 }
 .--text-xl {
@@ -114,3 +120,4 @@ body:has(.consult-modal.active) {
 		pointer-events: none;
 	}
 }
+
