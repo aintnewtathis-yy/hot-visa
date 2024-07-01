@@ -66,56 +66,56 @@
 		<p class="micro-title">Популярные направления</p>
 		<div class="popular-ways" bind:this={grid}>
 			<a href="/visas/usa" class="popular-ways__element">
-				<img loading="lazy" src="/usa.webp" alt="usa looksight" />
+				<enhanced:img loading="lazy" src="/static/usa.webp" alt="usa looksight" />
 				<p>США</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/spain" class="popular-ways__element">
-				<img loading="lazy" src="/spain.webp" alt="spain looksight" />
+				<enhanced:img loading="lazy" src="/static/spain.webp" alt="spain looksight" />
 				<p>Испания</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/china" class="popular-ways__element active">
-				<img loading="lazy" src="/china.webp" alt="china looksight" />
+				<enhanced:img loading="lazy" src="/static/china.webp" alt="china looksight" />
 				<p>Китай</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/india" class="popular-ways__element">
-				<img loading="lazy" src="/india.webp" alt="india looksight" />
+				<enhanced:img loading="lazy" src="/static/india.webp" alt="india looksight" />
 				<p>Индия</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/greece" class="popular-ways__element">
-				<img loading="lazy" src="/greece-hero.webp" alt="greece looksight" />
+				<enhanced:img loading="lazy" src="/static/greece.jpg" alt="greece looksight" />
 				<p>Греция</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/france" class="popular-ways__element">
-				<img loading="lazy" src="/france.webp" alt="france looksight" />
+				<enhanced:img loading="lazy" src="/static/france.webp" alt="france looksight" />
 				<p>Франция</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/singapur" class="popular-ways__element">
-				<img loading="lazy" src="/singapur-hero.webp" alt="singapur looksight" />
+				<enhanced:img loading="lazy" src="/static/singapore.webp" alt="singapur looksight" />
 				<p>Сингапур</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>
 				</button>
 			</a>
 			<a href="/visas/italy" class="popular-ways__element">
-				<img loading="lazy" src="/italy.webp" alt="italy looksight" />
+				<enhanced:img loading="lazy" src="/static/italy.webp" alt="italy looksight" />
 				<p>Италия</p>
 				<button class="btn-svg">
 					<span>Узнать подробнее</span>

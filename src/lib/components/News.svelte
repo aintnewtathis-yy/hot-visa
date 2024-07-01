@@ -10,21 +10,21 @@
             </h4>
             <div class="news-grid">
                 <a href="#" class="news-grid-element">
-                    <img src="/news.webp" alt="news thumbnail">
+                    <enhanced:img src="/static/news.webp" alt="news thumbnail">
                     <div class="news-grid-element-info">
                         <h5>Российских туристов в Японии во время цветения сакуры стало вдвое больше.</h5>
                         <p>21 мая 2024</p>
                     </div>
                 </a>
                 <a href="#" class="news-grid-element">
-                    <img src="/news2.webp" alt="news thumbnail">
+                    <enhanced:img src="/static/news2.webp" alt="news thumbnail">
                     <div class="news-grid-element-info">
                         <h5>Почему россиян не пускают в Мексику?</h5>
                         <p>15 мая 2024</p>
                     </div>
                 </a>
                 <a href="#" class="news-grid-element">
-                    <img src="/news3.webp" alt="news thumbnail">
+                    <enhanced:img src="/static/news3.webp" alt="news thumbnail">
                     <div class="news-grid-element-info">
                         <h5>Шри-Ланка продлевает бесплатные визы для россиян на месяц</h5>
                         <p>12 мая 2024</p>

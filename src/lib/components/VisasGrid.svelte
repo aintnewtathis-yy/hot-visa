@@ -10,72 +10,72 @@
 					<p>Популярные</p>
 					<a href="#">
 						Испания
-						<img src="/spainflag.webp" alt="spain flag" />
+						<enhanced:img src="/static/spainflag.webp" alt="spain flag" />
 					</a>
 					<a href="#">
 						Греция
-						<img src="/greeceflag.webp" alt="greece flag" />
+						<enhanced:img src="/static/greeceflag.webp" alt="greece flag" />
 					</a>
 					<a href="#"
 						>Франция
-						<img src="/franceflag.webp" alt="france flag" />
+						<enhanced:img src="/static/franceflag.webp" alt="france flag" />
 					</a>
 					<a href="#"
 						>Норвегия
-						<img src="/norwayflag.webp" alt="norway flag" />
+						<enhanced:img src="/static/norwayflag.webp" alt="norway flag" />
 					</a>
 					<a href="#"
 						>Италия
-						<img src="/italyflag.webp" alt="italy flag" />
+						<enhanced:img src="/static/italyflag.webp" alt="italy flag" />
 					</a>
 					<a href="#"
 						>Индия
-						<img src="/indiaflag.webp" alt="india flag" />
+						<enhanced:img src="/static/indiaflag.webp" alt="india flag" />
 					</a>
 					<a href="#"
 						>США
-						<img src="/usaflag.webp" alt="usa flag" />
+						<enhanced:img src="/static/usaflag.webp" alt="usa flag" />
 					</a>
 				</div>
 				<div class="visas-grid-columns-list">
 					<p>Европа</p>
 					<a href="#">
 						Испания
-						<img src="/spainflag.webp" alt="spain flag" />
+						<enhanced:img src="/static/spainflag.webp" alt="spain flag" />
 					</a>
 					<a href="#">
 						Греция
-						<img src="/greeceflag.webp" alt="greece flag" />
+						<enhanced:img src="/static/greeceflag.webp" alt="greece flag" />
 					</a>
 					<a href="#"
 						>Франция
-						<img src="/franceflag.webp" alt="france flag" />
+						<enhanced:img src="/static/franceflag.webp" alt="france flag" />
 					</a>
 					<a href="#"
 						>Норвегия
-						<img src="/norwayflag.webp" alt="norway flag" />
+						<enhanced:img src="/static/norwayflag.webp" alt="norway flag" />
 					</a>
 					<a href="#"
 						>Италия
-						<img src="/italyflag.webp" alt="italy flag" />
+						<enhanced:img src="/static/italyflag.webp" alt="italy flag" />
 					</a>
 				</div>
 				<div class="visas-grid-columns-list">
 					<p>Азия</p>
 					<a href="#">
 						Китай
-						<img src="/chinaflag.webp" alt="china flag" />
+						<enhanced:img src="/static/chinaflag.webp" alt="china flag" />
 					</a>
 					<a href="#"
 						>Индия
-						<img src="/indiaflag.webp" alt="india flag" />
+						<enhanced:img src="/static/indiaflag.webp" alt="india flag" />
 					</a>
 				</div>
 				<div class="visas-grid-columns-list">
 					<p>Другие</p>
 					<a href="#"
 						>США
-						<img src="/usaflag.webp" alt="usa flag" />
+						<enhanced:img src="/static/usaflag.webp" alt="usa flag" />
 					</a>
 				</div>
 			</div>
