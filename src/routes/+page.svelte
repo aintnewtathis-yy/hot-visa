@@ -9,7 +9,7 @@
 	import VisasGrid from '$lib/components/VisasGrid.svelte';
 </script>
 
-<div style="display: flex; flex-direction:column; gap: 150px;">
+<main >
 	<Hero />
 	<Whyus /> 
 	<PopularOption /> 
@@ -18,5 +18,5 @@
 	<Numbers />
 	<VisasGrid />
 	<News />
-</div>
+</main>
 	
