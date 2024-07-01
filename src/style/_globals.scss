@@ -20,6 +20,7 @@
 html {
 	scrollbar-gutter: stable;
 	height: auto;
+	overflow-x: hidden;
 
 	&:has(body.locked) {
 		@include above-tablet {
@@ -32,6 +33,9 @@ picture{
 	img{
 		height: 100%;
 	}
+}
+main{
+	overflow-x: hidden;
 }
 
 body {
@@ -121,6 +125,3 @@ body:has(.consult-modal.active) {
 	}
 }
 
-*{
-	border: 1px solid #000;
-}
