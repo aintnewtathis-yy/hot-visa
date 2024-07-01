@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
+	import { browser } from '$app/environment';
 
 	let visasMenu;
 	let visasLink;
@@ -12,6 +14,17 @@
 	let burgerModal;
 	let burgerIcon;
 	let consultModal;
+	let currentUrl = $page.route;
+
+	$: {
+		if (burgerIcon) {
+			if ($page.route !== currentUrl) {
+				burgerIcon.classList.remove('active');
+				burgerModal.classList.remove('active');
+				document.querySelector('body').classList.remove('locked');
+			}
+		}
+	}
 
 	function hoverLinks(element) {
 		const menu = document.querySelector(`.header-submenu[data-link="${element.dataset.link}"]`);
@@ -298,7 +311,7 @@
 				<a href="/visas/cipr">Кипр</a>
 			</li>
 			<li>
-				<a href="#">Франция</a>
+				<a href="/visas/france">Франция</a>
 			</li>
 			<li>
 				<a href="/visas/indonesia">Индонезия</a>
@@ -307,10 +320,10 @@
 				<a href="/visas/india">Индия</a>
 			</li>
 			<li>
-				<a href="#">Китай</a>
+				<a href="/visas/china">Китай</a>
 			</li>
 			<li>
-				<a href="#">Сингапур</a>
+				<a href="/visas/singapur">Сингапур</a>
 			</li>
 			<li>
 				<a href="/visas/usa">США</a>
@@ -321,13 +334,13 @@
 				<p>Назад</p>
 			</li>
 			<li>
-				<a href="#">ВНЖ и Гражданство Греции</a>
+				<a href="/vnzh/greece">ВНЖ и Гражданство Греции</a>
 			</li>
 			<li>
-				<a href="#">ВНЖ Испании</a>
+				<a href="/vnzh/spain">ВНЖ Испании</a>
 			</li>
 			<li>
-				<a href="#">Гражданство Израиля</a>
+				<a href="/vnzh/israel">Гражданство Израиля</a>
 			</li>
 		</ul>
 		<ul class="level-two" data-link-mobile="services">

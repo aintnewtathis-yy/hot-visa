@@ -218,6 +218,7 @@
 				h3 {
 					@include mobile {
 						text-wrap: balance;
+						padding: 0 2px;
 					}
 				}
 			}
