@@ -1,8 +1,19 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
+	import { page } from '$app/stores';
 
 	export let data;
 </script>
+
+<svelte:head>
+	<title>Новости - Визовое агентство Москва</title>
+	<meta name="description" content="Свежие новости и обновления от Визового агентства в Москве. Узнайте о последних изменениях в визовой политике и наших услугах.">
+	<meta name="og:title" content="Новости - Визовое агентство Москва">
+	<meta name="og:description" content="Последние новости и актуальные обновления от Визового агентства Москвы. Будьте в курсе всех изменений в сфере оформления виз.">
+	<meta name="og:url" content={$page.url.href}>
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="news-single-section --margin-bottom">
 	<div class="container">

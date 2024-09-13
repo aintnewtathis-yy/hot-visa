@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
-	import { modalOpen } from '$lib/stores'
+	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>Виза в Болгарию - Оформление визы в Визовом агентстве Москва</title>
+	<meta name="description" content="Оформление визы в Болгарию в Визовом агентстве Москва. Полное сопровождение, консультации и помощь в сборе документов. Быстро и надежно.">
+	<meta name="og:title" content="Виза в Болгарию - Оформление визы в Визовом агентстве Москва">
+	<meta name="og:description" content="Нужна виза в Болгарию? Визовое агентство Москва поможет вам оформить визу быстро и без лишних хлопот. Консультации и поддержка на каждом этапе.">
+	<meta name="og:url" content="{$page.url.href}">
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="visa-section --margin-bottom">
 	<div class="container">

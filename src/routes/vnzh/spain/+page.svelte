@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
 	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>ВНЖ в Испанию - Оформление вида на жительство в Визовом агентстве Москва</title>
+	<meta name="description" content="Оформление вида на жительство в Испанию в Визовом агентстве Москва. Полное сопровождение, помощь в сборе документов и консультации по всем вопросам ВНЖ.">
+	<meta name="og:title" content="ВНЖ в Испанию - Оформление вида на жительство в Визовом агентстве Москва">
+	<meta name="og:description" content="Планируете получить вид на жительство в Испании? Визовое агентство Москва предлагает профессиональные услуги по оформлению ВНЖ. Консультации и поддержка на каждом этапе процесса.">
+	<meta name="og:url" content="{$page.url.href}">
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="visa-section --margin-bottom">
 	<div class="container">

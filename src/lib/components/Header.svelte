@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { modalOpen } from '$lib/stores';
 	import { page } from '$app/stores';
-	import { browser } from '$app/environment';
+	import { enhance } from '$app/forms';
 
 	let visasMenu;
 	let visasLink;
@@ -19,11 +19,12 @@
 	$: {
 		if (burgerIcon) {
 			if ($page.route !== currentUrl) {
+				consultModal.classList.remove('active');
 				burgerIcon.classList.remove('active');
 				burgerModal.classList.remove('active');
 				document.querySelector('body').classList.remove('locked');
 			}
-		}
+		} 
 	}
 
 	function hoverLinks(element) {
@@ -130,13 +131,17 @@
 	<div class="container">
 		<div class="header">
 			<div class="header-top hidden-tablet">
-				<a href="#">все направления</a>
-				<a href="#reviews">отзывы клиентов</a>
+				<div>
+					<a href="#">все направления</a>
+					<a href="#reviews">отзывы клиентов</a>
+				</div>
 				<a href="/">
 					<img src="/logo.svg" alt="logo" />
 				</a>
-				<p>Москва, ул. Лесная д.43, офис 221</p>
-				<a href="/contacts">контакты</a>
+				<div>
+					<p>Москва, ул. Линейный проезд 6А</p>
+					<a href="/contacts">контакты</a>
+				</div>
 			</div>
 			<div class="header-bottom hidden-tablet">
 				<ul class="header-bottom-main-menu">
@@ -161,7 +166,7 @@
 				</ul>
 			</div>
 			<div class="header-mobile visible-tablet">
-				<a href="#">
+				<a href="/">
 					<img src="/logo.svg" alt="logo" />
 				</a>
 				<a href="tel:+79999999999">
@@ -220,13 +225,13 @@
 			<ul class="level-two" data-continent="asia">
 				<li data-backtolevelone><p>Назад</p></li>
 				<li>
+					<a href="/visas/china">Китай</a>
+				</li>
+				<li>
 					<a href="/visas/indonesia">Индонезия</a>
 				</li>
 				<li>
 					<a href="/visas/india">Индия</a>
-				</li>
-				<li>
-					<a href="/visas/china">Китай</a>
 				</li>
 				<li>
 					<a href="/visas/singapur">Сингапур</a>
@@ -252,9 +257,6 @@
 	<div class="header-submenu" data-link="services">
 		<div class="container">
 			<ul class="level-one">
-				<li>
-					<a href="/services/insurance">Страхование туристов</a>
-				</li>
 				<li>
 					<a href="/services/delivery">Курьерская доставка</a>
 				</li>
@@ -285,6 +287,9 @@
 		<ul class="level-two" data-link-mobile="visas">
 			<li data-backtoleveloneMobile>
 				<p>Назад</p>
+			</li>
+			<li>
+				<a href="/visas/china">Китай</a>
 			</li>
 			<li>
 				<a href="/visas/bolgaria">Болгария</a>
@@ -320,9 +325,6 @@
 				<a href="/visas/india">Индия</a>
 			</li>
 			<li>
-				<a href="/visas/china">Китай</a>
-			</li>
-			<li>
 				<a href="/visas/singapur">Сингапур</a>
 			</li>
 			<li>
@@ -348,9 +350,6 @@
 				<p>Назад</p>
 			</li>
 			<li>
-				<a href="/services/insurance">Страхование туристов</a>
-			</li>
-			<li>
 				<a href="/services/delivery">Курьерская доставка</a>
 			</li>
 			<li>
@@ -364,19 +363,43 @@
 				<p class="--text-xl">Заявка на визовую консультацию</p>
 				<p on:click={toggleConsult} class="close">закрыть</p>
 
-				<form action="#" method="POST">
+				<form action="/?/formHandle" method="POST" use:enhance>
 					<div class="consult-modal-form-body">
 						<div>
 							<label for="name">Ваше имя</label>
-							<input type="text" name="name" placeholder="Введите имя" />
+							<input
+								type="text"
+								name="name"
+								placeholder="Введите имя"
+								class:error={$page.form?.errors?.name ?? false}
+							/>
+							{#if $page.form?.errors?.name}
+								<p>{$page.form?.errors.name}</p>
+							{/if}
 						</div>
 						<div>
 							<label for="name">Телефон</label>
-							<input type="text" name="name" placeholder="Введите телефон" />
+							<input
+								type="text"
+								name="phone"
+								placeholder="Введите телефон"
+								class:error={$page.form?.errors?.phone ?? false}
+							/>
+							{#if $page.form?.errors?.phone}
+								<p>{$page.form?.errors.phone}</p>
+							{/if}
 						</div>
 						<div>
 							<label for="name">Email</label>
-							<input type="text" name="name" placeholder="Введите email" />
+							<input
+								type="text"
+								name="email"
+								placeholder="Введите email"
+								class:error={$page.form?.errors?.email ?? false}
+							/>
+							{#if $page.form?.errors?.email}
+								<p>{$page.form?.errors.email}</p>
+							{/if}
 						</div>
 					</div>
 					<button type="submit" class="btn-main">Отправить заявку</button>
@@ -412,10 +435,15 @@
 		}
 
 		&-top {
-			display: flex;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
 			align-items: center;
 			gap: 120px;
 			padding: 18px 0;
+
+			@include desktop {
+				gap: 20px;
+			}
 
 			@include tablet {
 				display: none;
@@ -424,15 +452,31 @@
 			a,
 			p {
 				text-transform: uppercase;
+				white-space: nowrap;
+
+				&:last-child {
+					text-align: end;
+				}
 
 				@include fluid-text(13, 12);
+			}
+			& > div {
+				display: flex;
+				gap: 20px;
+
+				&:last-child{
+					justify-content: end;
+					a, p{
+						text-align: end;
+					}
+				}
 			}
 
 			a:has(img) {
 				margin-inline: auto;
 
 				img {
-					max-height: 37px;
+					max-height: 25px;
 				}
 			}
 		}
@@ -533,6 +577,8 @@
 				top: 0;
 				width: 100%;
 				display: none;
+				max-height: calc(100vh - 130px);
+				overflow-y: auto;
 
 				&:global(.active) {
 					display: flex;
@@ -550,6 +596,11 @@
 
 			a:first-child {
 				margin-right: auto;
+
+				img{
+					
+					max-height: 25px;
+				}
 			}
 		}
 	}
@@ -584,7 +635,7 @@
 			background-color: #fff;
 			top: 100%;
 			display: flex;
-			height: calc(100dvh - 58px);
+			height: calc(100dvh - 50px);
 			flex-direction: column;
 			overflow-y: scroll;
 			transform: translateX(-110%);
@@ -592,7 +643,7 @@
 			@include mobile {
 				position: fixed;
 				width: 100%;
-				top: 58px;
+				top: 50px;
 				left: 0;
 				z-index: 1;
 				padding: 0 20px;
@@ -613,8 +664,11 @@
 					border-bottom: 1px solid #d2d2d2;
 					a,
 					p {
-						padding: 20px;
+						padding: 20px 0;
 						display: block;
+					}
+					p{
+						opacity: 0.6;
 					}
 
 					@include hover {
@@ -637,6 +691,7 @@
 			}
 			.level-two {
 				display: none;
+				padding-bottom: 80px;
 
 				&:global(.active) {
 					display: flex;
@@ -665,7 +720,7 @@
 			opacity: 1;
 			pointer-events: all;
 			width: 100%;
-			top: 58px;
+			top: 50px;
 			left: 0;
 			z-index: 2;
 			background-color: #fff;
@@ -739,6 +794,11 @@
 							color: #000;
 
 							@include fluid-text(20, 20);
+						}
+
+						p{
+							color: red;
+							@include fluid-text(12,12);
 						}
 					}
 				}

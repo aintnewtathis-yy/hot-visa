@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
 	import { modalOpen } from '$lib/stores'
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>Курьерская доставка документов - Визовое агентство Москва</title>
+	<meta name="description" content="Услуги курьерской доставки документов для оформления виз. Мы доставляем документы по России и за рубеж, делая процесс получения визы быстрее и удобнее.">
+	<meta name="og:title" content="Курьерская доставка документов - Визовое агентство Москва">
+	<meta name="og:description" content="Экономьте свое время с услугой курьерской доставки документов от Визового агентства в Москве. Мы осуществляем доставку не только по России, но и в другие страны.">
+	<meta name="og:url" content={$page.url.href}>
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="service-section --margin-bottom">
 	<div class="container">

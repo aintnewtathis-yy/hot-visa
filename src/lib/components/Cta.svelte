@@ -1,4 +1,8 @@
 <script>
+	let input;
+
+	let success;
+	let errors;
 </script>
 
 <section class="cta-section">
@@ -6,10 +10,42 @@
 		<div class="cta">
 			<p class="cta-microtitle">Заявка на бесплатную консультацию</p>
 			<h3 class="--text-xl">Никогда не пропускаем ваш звонок: мы всегда на связи!</h3>
-			<form class="cta-form" method="POST">
+			<form
+				class="cta-form"
+				method="POST"
+				on:submit|preventDefault={(e) => {
+					e.preventDefault();
+					const formData = new FormData();
+					formData.append('phone', input.value);
+
+					console.log(formData);
+					fetch('/form', {
+						method: 'POST',
+						body: formData
+					})
+						.then((response) => response.json())
+						.then((data) => {
+							console.log(data);
+							if (data.success) {
+								success = data.success;
+							} else if (data.errors) {
+								errors = data.errors;
+							}
+						})
+						.catch((error) => {
+							console.error('Error submitting form:', error);
+							// Handle error
+						});
+				}}
+			>
 				<p>Номер телефона</p>
 				<div>
-					<input type="tel" placeholder="+79999999999" />
+					<input type="tel" name="phone" placeholder="+79999999999" bind:this={input} />
+					{#if success}
+						<p>Ваше обращение отправлено! Оператор скоро с вами свяжется!</p>
+					{:else if errors?.phone}
+						<p>{errors?.phone}</p>
+					{/if}
 					<button class="btn-main" type="submit">Перезвоните мне</button>
 				</div>
 			</form>

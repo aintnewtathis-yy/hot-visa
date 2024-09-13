@@ -1,6 +1,17 @@
 <script>
 	import Reviews from '$lib/components/Reviews.svelte';
+	import { page } from '$app/stores';
 </script>
+
+<svelte:head>
+	<title>О нас - Визовое агентство Москва</title>
+	<meta name="description" content="Визовое агентство в Москве - наша команда профессионалов помогает в оформлении виз по всему миру. Узнайте больше о нас.">
+	<meta name="og:title" content="О нас - Визовое агентство Москва">
+	<meta name="og:description" content="Наша команда предоставляет услуги по оформлению виз в Москве. Гарантируем профессиональный подход и быстрые сроки. Узнайте больше о нас.">
+	<meta name="og:url" content={$page.url.href}>
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="about-section --margin-bottom">
 	<div class="container">

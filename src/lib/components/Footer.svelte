@@ -37,6 +37,9 @@
 					<h6>визы</h6>
 					<ul class="footer-mid-column-list">
 						<li>
+							<a href="/visas/china">Китай</a>
+						</li>
+						<li>
 							<a href="/visas/bolgaria">Болгария</a>
 						</li>
 						<li>
@@ -70,9 +73,6 @@
 							<a href="/visas/india">Индия</a>
 						</li>
 						<li>
-							<a href="/visas/china">Китай</a>
-						</li>
-						<li>
 							<a href="/visas/singapur">Сингапур</a>
 						</li>
 						<li>
@@ -87,9 +87,6 @@
 							<a href="/services/pasport">Получение загранпаспорта</a>
 						</li>
 						<li>
-							<a href="/services/insurance">Страхование туристов</a>
-						</li>
-						<li>
 							<a href="/services/delivery">Курьерская доставка</a>
 						</li>
 					</ul>
@@ -98,13 +95,13 @@
 					<h6>контакты</h6>
 					<ul class="footer-mid-column-list">
 						<li>
-							<p>Москва, ул. Лесная д.43, офис 221</p>
+							<p>Москва, ул. Линейный проезд 6А</p>
 						</li>
 						<li>
-							<a href="tel:+7 925 117-1777">+7 925 117-1777</a>
+							<a href="tel:+79995912865">+7 999 591 2865</a>
 						</li>
 						<li>
-							<a href="mailto:example@mail.ru">example@mail.ru</a>
+							<a href="mailto:info@pasport.pro">info@pasport.pro</a>
 						</li>
 					</ul>
 					<div class="socials">

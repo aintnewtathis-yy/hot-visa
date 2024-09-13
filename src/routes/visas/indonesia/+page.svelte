@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
-	import { modalOpen } from '$lib/stores'
+	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>Виза в Индонезию - Оформление визы в Визовом агентстве Москва</title>
+	<meta name="description" content="Оформление визы в Индонезию в Визовом агентстве Москва. Полное сопровождение процесса, помощь в сборе документов и быстрое оформление визы.">
+	<meta name="og:title" content="Виза в Индонезию - Оформление визы в Визовом агентстве Москва">
+	<meta name="og:description" content="Планируете поездку в Индонезию? Визовое агентство Москва предлагает профессиональные услуги по оформлению визы. Быстрое и удобное оформление с полным сопровождением.">
+	<meta name="og:url" content="{$page.url.href}">
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="visa-section --margin-bottom">
 	<div class="container">

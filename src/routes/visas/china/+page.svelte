@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
 	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>Виза в Китай - Оформление визы в Визовом агентстве Москва</title>
+	<meta name="description" content="Оформление визы в Китай в Визовом агентстве Москва. Помощь в сборе документов, консультации и быстрое оформление визы в Китай.">
+	<meta name="og:title" content="Виза в Китай - Оформление визы в Визовом агентстве Москва">
+	<meta name="og:description" content="Необходима виза в Китай? Визовое агентство Москва предлагает профессиональные услуги по оформлению визы. Быстро, удобно и с поддержкой на каждом этапе.">
+	<meta name="og:url" content="{$page.url.href}">
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="visa-section --margin-bottom">
 	<div class="container">

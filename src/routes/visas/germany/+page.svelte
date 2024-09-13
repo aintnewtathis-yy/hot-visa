@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
-	import { modalOpen } from '$lib/stores'
+	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>Виза в Германию - Оформление визы в Визовом агентстве Москва</title>
+	<meta name="description" content="Оформление визы в Германию в Визовом агентстве Москва. Полное сопровождение, помощь в сборе документов и быстрое оформление визы.">
+	<meta name="og:title" content="Виза в Германию - Оформление визы в Визовом агентстве Москва">
+	<meta name="og:description" content="Нужна виза в Германию? Визовое агентство Москва предоставляет профессиональные услуги по оформлению визы. Эффективное оформление и поддержка на каждом этапе.">
+	<meta name="og:url" content="{$page.url.href}">
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="visa-section --margin-bottom">
 	<div class="container">

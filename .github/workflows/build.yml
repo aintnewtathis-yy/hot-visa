@@ -29,7 +29,7 @@ jobs:
         uses: caprover/deploy-from-github@v1.1.2
         with:
           server: https://cr.xn----ctbanhfj8aezv9bxd.xn--80adxhks
-          app: 'visa'
+          app: 'sveltekit-app'
           token: ${{ secrets.APP_TOKEN }}
           image: 'ghcr.io/aintnewtathis-yy/hot-visa:latest'
 

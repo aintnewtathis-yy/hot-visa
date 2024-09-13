@@ -23,7 +23,7 @@
 		background: linear-gradient(rgb(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url('/hero.webp');
 		background-repeat: no-repeat;
 		background-position: top center;
-		background-size: 100%;
+		background-size: cover;
 		min-height: 100dvh;
 
 		button {

@@ -1,5 +1,16 @@
 <script>
+	import { page } from '$app/stores';
 </script>
+
+<svelte:head>
+	<title>Контакты - Визовое агентство Москва</title>
+	<meta name="description" content="Контактная информация Визового агентства в Москве. Адрес, телефон, электронная почта и карта проезда. Свяжитесь с нами для оформления виз.">
+	<meta name="og:title" content="Контакты - Визовое агентство Москва">
+	<meta name="og:description" content="Свяжитесь с Визовым агентством в Москве для оформления виз. Адрес, телефон, электронная почта и карта проезда. Мы всегда на связи.">
+	<meta name="og:url" content={$page.url.href}>
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="contacts-section --margin-bottom">
 	<div class="container">
@@ -9,15 +20,15 @@
 				<div class="contacts-hero-grid">
 					<div class="contacts-hero-grid-element">
 						<p>аДРЕС</p>
-						<p>Москва, ул. Лесная д.43, офис 221</p>
+						<p>Москва, ул. Линейный проезд 6А</p>
 					</div>
 					<div class="contacts-hero-grid-element">
 						<p>тЕЛЕФОН</p>
-						<p>+7 925 117-1777</p>
+						<a href="tel:+79995912865">+7 999 591 2865</a>
 					</div>
 					<div class="contacts-hero-grid-element">
 						<p>email</p>
-						<p>example@mail.ru</p>
+						<a href="mailto:info@pasport.pro">info@pasport.pro</a>
 					</div>
 					<div class="contacts-hero-grid-element">
 						<p>вРЕМЯ РАБОТЫ</p>
@@ -27,7 +38,7 @@
 			</div>
 			<div class="contacts-map">
 				<iframe
-					src="https://yandex.ru/map-widget/v1/?um=constructor%3A7204171c1d4b97c463552f60850fcdd6df31867c2200512ce5ad9d99d1817eab&amp;source=constructor"
+					src="https://yandex.ru/map-widget/v1/?um=constructor%3A08809e2391f554637ca1560a490cbcdb5df8ad53635aaab77b3a0442c5eae133&amp;source=constructor"
 					width="100%"
 					height="600"
 					frameborder="0"

@@ -61,6 +61,10 @@ body {
 	width: 100%;
 	max-width: 300px;
 	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 
 	@include hover {
 	}

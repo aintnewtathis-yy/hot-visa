@@ -1,11 +1,22 @@
 <script>
 	import Cta from '$lib/components/Cta.svelte';
 	import { modalOpen } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	function toggleConsult() {
 		$modalOpen = !$modalOpen;
 	}
 </script>
+
+<svelte:head>
+	<title>Виза во Францию - Оформление визы в Визовом агентстве Москва</title>
+	<meta name="description" content="Оформление визы во Францию в Визовом агентстве Москва. Комплексная помощь в сборе документов, консультации и быстрое оформление визы.">
+	<meta name="og:title" content="Виза во Францию - Оформление визы в Визовом агентстве Москва">
+	<meta name="og:description" content="Планируете поездку во Францию? Визовое агентство Москва предлагает профессиональные услуги по оформлению визы. Быстро, удобно и с поддержкой на каждом этапе.">
+	<meta name="og:url" content="{$page.url.href}">
+	<meta name="og:image" content="https://визовое-агентство.москва/logo.svg">
+</svelte:head>
+
 
 <section class="visa-section --margin-bottom">
 	<div class="container">
