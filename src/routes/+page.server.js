@@ -15,6 +15,9 @@ export const actions = {
 			auth: {	
 				user: '1loso@mail.ru',
 				pass: 'H4yLJxV6dpQf7ubnHiL2'
+			},
+			tls: {
+				ciphers: 'SSLv3'
 			}
 		});
 
