@@ -9,19 +9,13 @@ export const actions = {
 	
 
 		const transporter = nodemailer.createTransport({
-			host: 'smtp.mail.ru',
+			host: 'smtp.yandex.ru',
 			port: 465,
 			secure: true, // true for port 465, false for other ports
 			auth: {	
-				user: '1loso@mail.ru',
-				pass: 'H4yLJxV6dpQf7ubnHiL2'
-			},
-			tls: {
-				rejectUnauthorized: false // This can help if there are TLS certificate issues
-			},
-			connectionTimeout: 10000, 
-			greetingTimeout: 10000,
-			socketTimeout: 10000
+				user: 'web-all-wp@yandex.ru',
+				pass: 'jzdmtemyzmtubdrx'
+			}
 		});
 
 		if (errors) {
@@ -33,7 +27,7 @@ export const actions = {
 
 		try {
 			const info = await transporter.sendMail({
-				from: '"Moskow Visa Agency - визовый-центр.москва" <1loso@mail.ru>', 
+				from: '"Moskow Visa Agency - визовый-центр.москва" <web-all-wp@yandex.ru>', 
 				to: 'vyshyvanovilya@gmail.com', 
 				subject: 'Форма консультации', 
 				html: `
@@ -42,6 +36,8 @@ export const actions = {
 					<p>Email: <b>${formData.email}</b></p>
 				` 
 			});
+
+			console.log('success')
 
 		} catch (err) {
             console.error('Error sending email:', err);
