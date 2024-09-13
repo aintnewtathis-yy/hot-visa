@@ -17,8 +17,11 @@ export const actions = {
 				pass: 'H4yLJxV6dpQf7ubnHiL2'
 			},
 			tls: {
-				ciphers: 'SSLv3'
-			}
+				rejectUnauthorized: false // This can help if there are TLS certificate issues
+			},
+			connectionTimeout: 10000, 
+			greetingTimeout: 10000,
+			socketTimeout: 10000
 		});
 
 		if (errors) {
