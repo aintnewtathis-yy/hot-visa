@@ -10,8 +10,8 @@ export const actions = {
 
 		const transporter = nodemailer.createTransport({
 			host: 'smtp.yandex.ru',
-			port: 465,
-			secure: true, // true for port 465, false for other ports
+			port: 587,
+			secure: false, // true for port 465, false for other ports
 			auth: {	
 				user: 'web-all-wp@yandex.ru',
 				pass: 'jzdmtemyzmtubdrx'
