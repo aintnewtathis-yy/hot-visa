@@ -24,7 +24,7 @@
 				burgerModal.classList.remove('active');
 				document.querySelector('body').classList.remove('locked');
 			}
-		} 
+		}
 	}
 
 	function hoverLinks(element) {
@@ -260,9 +260,9 @@
 				<li>
 					<a href="/services/delivery">Курьерская доставка</a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="/services/pasport">Получение загранпаспорта</a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>
@@ -464,9 +464,10 @@
 				display: flex;
 				gap: 20px;
 
-				&:last-child{
+				&:last-child {
 					justify-content: end;
-					a, p{
+					a,
+					p {
 						text-align: end;
 					}
 				}
@@ -597,8 +598,7 @@
 			a:first-child {
 				margin-right: auto;
 
-				img{
-					
+				img {
 					max-height: 25px;
 				}
 			}
@@ -667,7 +667,7 @@
 						padding: 20px 0;
 						display: block;
 					}
-					p{
+					p {
 						opacity: 0.6;
 					}
 
@@ -796,9 +796,9 @@
 							@include fluid-text(20, 20);
 						}
 
-						p{
+						p {
 							color: red;
-							@include fluid-text(12,12);
+							@include fluid-text(12, 12);
 						}
 					}
 				}
